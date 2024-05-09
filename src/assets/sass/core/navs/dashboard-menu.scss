@@ -1,0 +1,108 @@
+.dashboard-menu {
+  background-color: $gray-900;
+  flex: 0 0 auto;
+}
+.menu {
+  &__button.btn {
+    margin: 40px 24px;
+  }
+  &__content__links {
+    & > a {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      font-weight: 400;
+      font-size: 0.9rem;
+      line-height: 123%;
+      opacity: 0.9;
+      text-decoration-color: rgba(#fff, 0.5);
+    }
+  }
+  &__content__link:not(:last-child) {
+    margin-bottom: 2.5rem;
+  }
+  &__content__link img {
+    height: 17px;
+    width: 17px;
+  }
+  &-hr {
+    margin: 2.375rem 1.25rem;
+    &::selection {
+      color: none;
+      background: none;
+    }
+    &::-moz-selection {
+      color: none;
+      background: none;
+    }
+  }
+  &__extension-info {
+    text-decoration: none;
+    & > div {
+      color: #eae9e9;
+      font-size: 0.7rem;
+      line-height: 125%;
+    }
+    & > img {
+      width: 19.25px;
+      height: 19.25px;
+    }
+  }
+  &__footer {
+    margin: auto 0 52px 31px;
+    & a {
+      color: #ffffff;
+      opacity: 0.4;
+      display: block;
+      font-size: 0.875rem;
+      line-height: 118%;
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      &:not(:last-child) {
+        margin-bottom: 0.8125rem;
+      }
+      &:not(:first-child) {
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .dashboard-menu {
+    min-width: 215px;
+    max-width: 14.93vw;
+  }
+  .menu {
+    &__extension-info {
+      column-gap: 11px;
+      border: 1px solid #5f5f5f;
+      border-radius: 5px;
+      padding: 0.625rem;
+      & > img {
+        width: 27px;
+        height: 27px;
+      }
+    }
+    &__content__links {
+      padding: 0 30px;
+    }
+    &__content__link img {
+      margin-right: 0.875rem;
+    }
+    &__content__link:not(:last-child) {
+      margin-bottom: 1.36rem;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .menu__content {
+    align-items: center;
+  }
+  .menu__button.btn {
+    margin: 20px 6px 40px 6px;
+  }
+  .menu__content__links {
+    margin-bottom: 40px;
+  }
+}
